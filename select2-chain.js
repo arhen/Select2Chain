@@ -1,5 +1,5 @@
 /*
-A Javascript library to using select2 as chain to another select2
+A Javascript library to make select2 as chain to another select2
 */
 var Select2Chain = (function (window, $) {
 
@@ -20,7 +20,7 @@ var Select2Chain = (function (window, $) {
 			});
 			$.getJSON(url.replace(':parentId:', $(this).val()), function (items) {
 
-				var newOptions = '<option value=""> Sedang menarik data . . .</option>';
+				var newOptions = '<option value=""> Loading data . . .</option>';
 				if (items.success) {
 					$.each(items.data, function (i, item) {
 						newOptions += '<option value="' + item.id + '">' + item.name + '</option>';
@@ -40,7 +40,7 @@ var Select2Chain = (function (window, $) {
 
 		parent.select2(select2Options).on("select2:unselecting", function (e) {
 
-			var newOptions = '<option value="">-- Pilih --</option>';
+			var newOptions = '<option value="">-- Choose --</option>';
 			child.select2('destroy').html(newOptions).prop("disabled", false)
 				.select2(options);
 			child.select2(select2Options).trigger({
