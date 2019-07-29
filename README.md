@@ -10,7 +10,7 @@ A Javascript library to make select2 as chain to another select2
 
 ## Installation
 
-- Fork/dowwnload this repo
+- Fork/download this repo
 - Add ``select2-chain.js`` below ``select2.min.js`` and jquery.min.js on your script
 - Now you can use it!
 
@@ -18,7 +18,7 @@ A Javascript library to make select2 as chain to another select2
 
 ```javascript
 
-//Create your custom coptions for select2 (optional)
+//Create your custom options for select2 (optional)
 let select2Options = {
   placeholder: "- Pilih -",
   triggerChange: true,
@@ -37,12 +37,12 @@ and then let select2-chain do magic for you!
 example:
 **/
 
-var chainingData1 = new Select2Chain($('#provinsi'), $('#kabupaten), getKab, select2Options);
-
+var chainingData1 = new Select2Chain($('#provinsi'), $('#kabupaten'), getKab, select2Options);
+//You can using promises too
 chainingData1.then(function(parent,child,items){
   console.log(items);
   //open child select2 immedietly
-  child.select2('open);
+  child.select2('open');
 });
 ```
 
