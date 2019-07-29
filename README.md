@@ -24,8 +24,9 @@ let select2Options = {
   triggerChange: true,
   allowClear: true
 };
+
 //define url where select2-chain will getting data
-// parentId: is paramater that will be using by select-2 chain to get parent id value (selected item). DON'T CHANGE THIS NAME.
+//parentId: is paramater that will be using by select-2 chain to get parent id value (selected item). DON'T CHANGE THIS NAME.
 
 let getKab = '/get_kabupaten/' + ':parentId:';
 
@@ -38,12 +39,8 @@ example:
 
 var chainingData1 = new Select2Chain($('#provinsi'), $('#kabupaten), getKab, select2Options);
 
-// You can add promises too:
-
 chainingData1.then(function(parent,child,items){
-
   console.log(items);
-
   //open child select2 immedietly
   child.select2('open);
 });
