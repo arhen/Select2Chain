@@ -28,7 +28,7 @@ let select2Options = {
 //define url where select2-chain will getting data
 //parentId: is paramater that will be using by select-2 chain to get parent id value (selected item). DON'T CHANGE THIS NAME.
 
-let getKab = '/get_kabupaten/' + ':parentId:';
+let getKab = '/get_kabupaten/' + ':parentId';
 
 /**
 var chainingData1 = new Select2Chain({parentelement-id-here}, {childelement-id-here}, {url-here}, {select2-options-here});
